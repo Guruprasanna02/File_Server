@@ -16,5 +16,8 @@ services:
         image: file_server
         ports: 
             - 9000:80
+        volumes: 
+            - data:/root/
 volumes:
     db_data:
+    data:
