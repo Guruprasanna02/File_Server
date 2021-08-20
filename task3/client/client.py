@@ -9,7 +9,7 @@ from Crypto import Random
 HEADER = 64*4096
 PORT = 9001
 FORMAT = 'utf-8'
-key = b'Sixteen byte key'
+key = b'B?E(H+MbPeShVmYq3t6w9z$C&F)J@NcR'
 
 #SERVER should be set according to the ip address in which server is running, which is displayed when the server is started. Since its client file,this should be set accordingly before providing this script to the client.
 SERVER = "172.18.0.2" 
