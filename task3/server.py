@@ -14,7 +14,7 @@ PORT = 9001
 SERVER = socket.gethostbyname(socket.gethostname())
 ADDR = (SERVER, PORT)
 FORMAT = 'utf-8'
-key = b'Sixteen byte key'
+key = b'B?E(H+MbPeShVmYq3t6w9z$C&F)J@NcR'
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(ADDR)
