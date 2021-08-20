@@ -63,7 +63,6 @@ def download(conn,addr,domain,filename):
         file = open(f"./{domain}/{filename}", 'rb')
         forEncData = file.read(HEADER)
         info = [enc_iv,len(forEncData)]
-        print(info)
         info_list = pickle.dumps(info)
         conn.send(info_list)
         conn.recv(16)
