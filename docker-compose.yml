@@ -15,7 +15,7 @@ services:
             context: .
         image: file_server
         ports: 
-            - 9000:80
+            - 9001:9001
         volumes: 
             - data:/root/
 volumes:

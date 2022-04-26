@@ -11,7 +11,7 @@ from Crypto import Random
 # header size can be varied manually according to the maximum size of the file to be transferred or a while loop can be used in case there is no restriction
 HEADER = 64*4096
 PORT = 9001
-SERVER = socket.gethostbyname(socket.gethostname())
+SERVER = "0.0.0.0"
 ADDR = (SERVER, PORT)
 FORMAT = 'utf-8'
 key = b'B?E(H+MbPeShVmYq3t6w9z$C&F)J@NcR'

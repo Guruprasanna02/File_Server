@@ -12,7 +12,7 @@ FORMAT = 'utf-8'
 key = b'B?E(H+MbPeShVmYq3t6w9z$C&F)J@NcR'
 
 #SERVER should be set according to the ip address in which server is running, which is displayed when the server is started. Since its client file,this should be set accordingly before providing this script to the client.
-SERVER = "172.18.0.2" 
+SERVER = "127.0.0.1" 
 ADDR = (SERVER, PORT)
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)

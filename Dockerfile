@@ -5,6 +5,9 @@ RUN apt-get update > /dev/null
 RUN pip3 install pycryptodome > /dev/null
 RUN pip3 install mysql-connector-python > /dev/null
 
+COPY entrypoint.sh /root/entrypoint.sh
+RUN chmod +x /root/entrypoint.sh
+
 COPY server.py /root/server.py
 RUN chmod +rwx /root/server.py
 
@@ -19,3 +22,5 @@ RUN chmod +rwx /root/webDev/
 
 COPY sysAd/ /root/sysAd/
 RUN chmod +rwx /root/sysAd/
+
+CMD [ "bash", "entrypoint.sh" ]
