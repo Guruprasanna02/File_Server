@@ -1,6 +1,14 @@
 FROM python:latest
 WORKDIR /root
-RUN apt-get update > /dev/null
+RUN apt-get update && apt-get install -y \
+	vim \
+    netcat \
+    git \
+    curl \
+	libcurl4-openssl-dev \
+    libpng-dev \
+    libonig-dev \
+    libxml2-dev
 
 RUN pip3 install pycryptodome > /dev/null
 RUN pip3 install mysql-connector-python > /dev/null
