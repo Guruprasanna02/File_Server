@@ -1,6 +1,17 @@
 version: '3.7'
 
 services:
+    scripts :
+        build:
+            context: .
+        image: file_server
+        ports: 
+            - 9001:9001
+        volumes: 
+            - data:/root/
+        depends_on:
+            - db
+            
     db :
         image: mysql:latest
         restart: always
@@ -10,14 +21,7 @@ services:
             MYSQL_ROOT_PASSWORD: password
         expose: 
             - 3306
-    scripts :
-        build:
-            context: .
-        image: file_server
-        ports: 
-            - 9001:9001
-        volumes: 
-            - data:/root/
+            
 volumes:
     db_data:
     data:
